@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Teamt42_JavaFX.MainController">
+   <left>
+      <VBox fillWidth="false" prefHeight="524.0" prefWidth="182.0">
+         <children>
+            <TextField fx:id="searchTextFiled" prefHeight="25.0" prefWidth="188.0" />
+            <ListView fx:id="historyLitsView" prefHeight="417.0" prefWidth="182.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="319.0" prefWidth="218.0" BorderPane.alignment="CENTER">
+         <children>
+            <WebView fx:id="videoWebView" prefHeight="288.0" prefWidth="418.0" VBox.vgrow="ALWAYS" />
+            <TableView fx:id="resultTableView" layoutX="100.0" prefHeight="179.0" prefWidth="418.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="197.0" text="C1" />
+                <TableColumn prefWidth="213.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="60.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" minWidth="-Infinity" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Button" HBox.hgrow="ALWAYS" />
+            <ToggleButton fx:id="PLAY" mnemonicParsing="false" prefHeight="65.0" prefWidth="82.0" text="ToggleButton" HBox.hgrow="ALWAYS" />
+            <Button fx:id="next" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Button" HBox.hgrow="ALWAYS" />
+            <Slider fx:id="volumeSlider" prefHeight="60.0" prefWidth="75.0" value="100.0" />
+            <Slider fx:id="songSlider" prefHeight="64.0" prefWidth="345.0" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar fx:id="mainMenu" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
